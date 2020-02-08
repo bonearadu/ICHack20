@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class SearchBar extends AppCompatActivity {
-
+    SearchView mySearchView;
     ListView search_group;
     ArrayAdapter<String> adapter;
 
@@ -19,11 +19,25 @@ public class SearchBar extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_bar);
+        mySearchView = (SearchView) findViewById(R.id.searchView);
         search_group = (ListView) findViewById(R.id.search_group);
         ArrayList<String> arrayGroup = new ArrayList<>();
         arrayGroup.addAll(Arrays.asList(getResources().getStringArray(R.array.my_groups)));
         adapter = new ArrayAdapter<String>(SearchBar.this,
-                android.R.layout.simple_expandable_list_item_1, arrayGroup);
+                android.R.layout.simple_list_item_1, arrayGroup);
         search_group.setAdapter(adapter);
+
+        mySearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adapter.getFilter().filter(newText);
+                return false;
+            }
+        });
     }
 }
