@@ -33,12 +33,12 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this, Menu.class));
         }
         setContentView(R.layout.activity_main);
-        email = (EditText)findViewById(R.id.editText);
-        password = (EditText)findViewById(R.id.editText2);
-        signIn = (Button)findViewById(R.id.button);
-        signUp = (Button)findViewById(R.id.button4);
-        loginGuest = (Button)findViewById(R.id.loginGuest);
-        changePssword = (Button)findViewById(R.id.button3);
+        email = findViewById(R.id.editText);
+        password = findViewById(R.id.editText2);
+        signIn = findViewById(R.id.button);
+        signUp = findViewById(R.id.button4);
+        loginGuest = findViewById(R.id.loginGuest);
+        changePssword = findViewById(R.id.button3);
 
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override

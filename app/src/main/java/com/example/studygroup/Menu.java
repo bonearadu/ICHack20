@@ -18,11 +18,11 @@ public class Menu extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
         Toolbar toolbar = findViewById(R.id.menu);
         setSupportActionBar(toolbar);
-        findStudyGroup = (Button)findViewById(R.id.findStudyGroup);
+        findStudyGroup = findViewById(R.id.findStudyGroup);
         findStudyGroup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //startActivity(new Intent(, Menu.class));
+                startActivity(new Intent(Menu.this, Searchbar.class));
             }
         });
     }
