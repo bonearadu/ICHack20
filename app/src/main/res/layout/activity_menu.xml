@@ -5,10 +5,11 @@
     android:id="@+id/coordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:foregroundGravity="clip_horizontal"
     tools:context=".Menu">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/menu"
+        android:id="@+id/header"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/gradient"
@@ -25,10 +26,10 @@
         android:layout_width="190dp"
         android:layout_height="190dp"
         android:layout_marginTop="44dp"
-        android:autoText="false"
+        android:background="@drawable/home_menu_corners"
         android:backgroundTint="#CDDC39"
         android:fontFamily="sans-serif-condensed-light"
-        android:paddingTop="150dp"
+        android:paddingTop="140dp"
         android:text="Find Study Group"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -37,16 +38,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menu" />
+        app:layout_constraintTop_toBottomOf="@+id/header" />
 
     <Button
         android:id="@+id/createStudyGroup"
         android:layout_width="190dp"
         android:layout_height="190dp"
         android:layout_marginTop="52dp"
+        android:background="@drawable/home_menu_corners"
         android:backgroundTint="#CDDC39"
         android:fontFamily="sans-serif-light"
-        android:paddingTop="150dp"
+        android:paddingTop="140dp"
         android:text="Create Study Group"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="18sp"
@@ -62,11 +64,11 @@
         android:fontFamily="sans-serif-light"
         android:text="Home Menu"
         android:textSize="26sp"
-        app:layout_constraintBottom_toTopOf="@+id/menu"
-        app:layout_constraintEnd_toStartOf="@+id/menu"
+        app:layout_constraintBottom_toTopOf="@+id/header"
+        app:layout_constraintEnd_toStartOf="@+id/header"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/menu"
-        app:layout_constraintTop_toBottomOf="@+id/menu" />
+        app:layout_constraintStart_toEndOf="@+id/header"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
 
     <ImageView
         android:id="@+id/imageView"
