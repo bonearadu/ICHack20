@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private Button signIn;
     private Button signUp;
     private Button loginGuest;
-    private Button changePssword;
+    private Button changePassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         signIn = findViewById(R.id.button4);
         signUp = findViewById(R.id.button);
         loginGuest = findViewById(R.id.loginGuest);
-        changePssword = findViewById(R.id.button3);
+        changePassword = findViewById(R.id.button3);
 
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        changePssword.setOnClickListener(new View.OnClickListener() {
+        changePassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 firebaseAuth.sendPasswordResetEmail(email.getText().toString())

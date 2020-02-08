@@ -25,6 +25,7 @@ public class Menu extends AppCompatActivity {
                 startActivity(new Intent(Menu.this, SearchBar.class));
             }
         });
+
     }
 
 }
