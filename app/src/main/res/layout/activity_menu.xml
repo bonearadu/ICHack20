@@ -1,39 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/coordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".Menu">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/menu"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme" >
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Menu" />
-
-    </androidx.appcompat.widget.Toolbar>
 
     <Button
         android:id="@+id/findStudyGroup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Find Study Group" />
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="44dp"
+        android:autoText="false"
+        android:backgroundTint="#CDDC39"
+        android:fontFamily="sans-serif-condensed-light"
+        android:paddingTop="150dp"
+        android:text="Find Study Group"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textDirection="firstStrong"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu" />
 
     <Button
         android:id="@+id/createStudyGroup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Create Study Group" />
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="#CDDC39"
+        android:fontFamily="sans-serif-light"
+        android:paddingTop="150dp"
+        android:text="Create Study Group"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/findStudyGroup" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="Home Menu"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/menu"
+        app:layout_constraintEnd_toStartOf="@+id/menu"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/menu"
+        app:layout_constraintTop_toBottomOf="@+id/menu" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:elevation="100dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/findStudyGroup"
+        app:layout_constraintEnd_toEndOf="@+id/findStudyGroup"
+        app:layout_constraintStart_toStartOf="@+id/findStudyGroup"
+        app:layout_constraintTop_toTopOf="@+id/findStudyGroup"
+        app:srcCompat="@drawable/group_study" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:elevation="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/createStudyGroup"
+        app:layout_constraintEnd_toEndOf="@+id/createStudyGroup"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="@+id/createStudyGroup"
+        app:layout_constraintTop_toTopOf="@+id/createStudyGroup"
+        app:layout_constraintVertical_bias="0.2"
+        app:srcCompat="@drawable/stutyalone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
