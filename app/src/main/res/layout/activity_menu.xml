@@ -9,7 +9,7 @@
     tools:context=".Menu">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/Menu"
+        android:id="@+id/menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
