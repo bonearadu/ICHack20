@@ -3,4 +3,9 @@
     <string name="title_activity_menu">Menu</string>
     <string name="title_activity_search_bar">SearchBar</string>
     <string name="title_activity_searchbar">Searchbar</string>
+    <string-array name="my_groups">
+        <item>Computing</item>
+        <item>Mathematics</item>
+        <item>JMC</item>
+    </string-array>
 </resources>
