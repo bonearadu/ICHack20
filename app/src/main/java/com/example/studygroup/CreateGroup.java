@@ -7,7 +7,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 public class CreateGroup extends AppCompatActivity {
 
@@ -15,10 +14,8 @@ public class CreateGroup extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_group);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        final Spinner Department = findViewById(R.id.spinner);
-        final Spinner Faculty = findViewById(R.id.spinner2);
+        final Spinner Department = findViewById(R.id.faculty);
+        final Spinner Faculty = findViewById(R.id.departament);
         Department.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {

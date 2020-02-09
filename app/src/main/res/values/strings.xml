@@ -46,5 +46,11 @@
         <item>Analytics and Operations</item>
         <item>Strategy and Organisational Behaviour</item>
     </string-array>
+    <string-array name="my_years">
+        <item>First Year</item>
+        <item>Second Year</item>
+        <item>Third Year</item>
+        <item>Fourth Year</item>
+    </string-array>
     <string name="title_activity_add_event">AddEvent</string>
 </resources>
