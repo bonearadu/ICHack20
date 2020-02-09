@@ -54,8 +54,6 @@ public class StudyGroup {
                 StudyGroup.ids.clear();
                 String value = dataSnapshot.getValue(String.class);
                 StudyGroup.ids.add(value+"");
-                Log.d(TAG, "Value is: " + value);
-                Log.d(TAG, "Value iss: " + ids.get(0));
             }
 
             @Override

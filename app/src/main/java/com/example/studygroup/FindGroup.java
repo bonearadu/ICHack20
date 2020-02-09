@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class FindGroup extends AppCompatActivity {
     SearchView mySearchView;
@@ -24,11 +23,11 @@ public class FindGroup extends AppCompatActivity {
         mySearchView = (SearchView) findViewById(R.id.searchView);
         search_group = (ListView) findViewById(R.id.search_group);
         ArrayList<String> arrayGroup = new ArrayList<>();
-        List<StudyGroup> studyGroups = DatabaseAssistant.getStudyGroups();
-        for (StudyGroup studyGroup : studyGroups) {
-            arrayGroup.add(studyGroup.toString());
-        }
-    //    arrayGroup.addAll(Arrays.asList(getResources().getStringArray(R.array.my_groups)));
+    //    List<String> studyGroups = DatabaseAssistant.getStudyGroups();
+    //    for (String studyGroup : studyGroups) {
+    //        arrayGroup.add(studyGroup.toString());
+    //    }
+        arrayGroup.addAll(Arrays.asList(getResources().getStringArray(R.array.my_groups)));
         adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, arrayGroup);
         search_group.setAdapter(adapter);

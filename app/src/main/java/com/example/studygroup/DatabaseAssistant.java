@@ -14,6 +14,7 @@ import java.util.List;
 import static android.content.ContentValues.TAG;
 
 public class DatabaseAssistant {
+    public static final List<StudyGroup> result = new ArrayList<>();
 
     public final static FirebaseDatabase database = FirebaseDatabase.getInstance();
 
@@ -29,12 +30,14 @@ public class DatabaseAssistant {
 
     public static List<StudyGroup> getStudyGroups(){
         DatabaseReference myRef = database.getReference("studyGroups");
-        final List<StudyGroup> result = new ArrayList<>();
-        myRef.addValueEventListener(new ValueEventListener() {
+        DatabaseReference ref2 = myRef.child("studyGroups");
+        myRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                DatabaseAssistant.result.clear();
                 for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
-                    result.add(postSnapshot.getValue(StudyGroup.class));
+                    Log.d(TAG, "I was called");
+                    DatabaseAssistant.result.add(postSnapshot.getValue(StudyGroup.class));
                 }
             }
 
@@ -45,7 +48,8 @@ public class DatabaseAssistant {
                 // ...
             }
     });
-        return result;
+        Log.d(TAG, "Result size is " + DatabaseAssistant.result.size());
+        return DatabaseAssistant.result;
    }
 
    public void deleteStudyGroup(String id){
