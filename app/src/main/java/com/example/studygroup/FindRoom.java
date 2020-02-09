@@ -18,7 +18,7 @@ public class FindRoom extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search_bar);
+        setContentView(R.layout.activity_find_room);
         mySearchView = (SearchView) findViewById(R.id.searchView);
         search_group = (ListView) findViewById(R.id.search_group);
         ArrayList<String> arrayGroup = new ArrayList<>();
