@@ -16,8 +16,7 @@ public class Menu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        Toolbar toolbar = findViewById(R.id.menu);
-        setSupportActionBar(toolbar);
+        Toolbar toolbar = findViewById(R.id.header);
         findStudyGroup = findViewById(R.id.findStudyGroup);
         findStudyGroup.setOnClickListener(new View.OnClickListener() {
             @Override
