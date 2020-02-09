@@ -1,48 +1,58 @@
 package com.example.studygroup;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.SearchView;
+
+import android.view.View;
+import android.widget.Button;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 
 public class FindGroup extends AppCompatActivity {
-    SearchView mySearchView;
-    ListView search_group;
-    ArrayAdapter<String> adapter;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_group);
-        mySearchView = (SearchView) findViewById(R.id.searchView);
-        search_group = (ListView) findViewById(R.id.search_group);
-        ArrayList<String> arrayGroup = new ArrayList<>();
-    //    List<String> studyGroups = DatabaseAssistant.getStudyGroups();
-    //    for (String studyGroup : studyGroups) {
-    //        arrayGroup.add(studyGroup.toString());
-    //    }
-        arrayGroup.addAll(Arrays.asList(getResources().getStringArray(R.array.my_groups)));
-        adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, arrayGroup);
-        search_group.setAdapter(adapter);
 
-        mySearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false;
-            }
+        Button buttonEngineer = findViewById(R.id.buttonEngineering);
+        buttonEngineer.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        startActivity(new Intent(FindGroup.this, SearchEngineer.class));
+                    }
+                });
 
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                adapter.getFilter().filter(newText);
-                return false;
-            }
-        });
+        Button buttonMedicine = findViewById(R.id.buttonMedicine);
+        buttonMedicine.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        startActivity(new Intent(FindGroup.this, SearchMedicine.class));
+                    }
+                });
+        Button buttonNatural = findViewById(R.id.buttonNatural);
+        buttonNatural.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        startActivity(new Intent(FindGroup.this, SearchNatural.class));
+                    }
+                });
+        Button buttonBusiness = findViewById(R.id.buttonBusiness);
+        buttonBusiness.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        startActivity(new Intent(FindGroup.this, SearchBusiness.class));
+                    }
+                });
+
+
     }
 }
+

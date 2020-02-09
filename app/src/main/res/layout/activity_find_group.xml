@@ -1,53 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar"
+    tools:context=".FindGroup">
+
+    <Button
+        android:id="@+id/buttonEngineering"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_width="match_parent">
+        android:text="Faculty of Engineering" />
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/faculties"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/buttonMedicine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Faculty of Medicine" />
 
-            app:tabMode="fixed">
+    <Button
+        android:id="@+id/buttonNatural"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Faculty of Natural Sciences" />
 
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/eng"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Engineering" />
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/med"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Medicine" />
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/nat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Natural Sciences" />
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/bus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Business" />
-        </com.google.android.material.tabs.TabLayout>
-
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/view_pager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <Button
+        android:id="@+id/buttonBusiness"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Imperial College Business School" />
+</LinearLayout>
