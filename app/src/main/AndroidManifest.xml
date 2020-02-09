@@ -12,9 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".FindGroup"></activity>
+        <activity android:name=".CreateGroup"></activity>
         <activity android:name=".ManageGroup" />
-        <activity android:name=".CreateGroup" />
+        <activity android:name=".FindGroup" />
         <activity
             android:name=".Menu"
             android:label="@string/title_activity_menu"

@@ -23,7 +23,7 @@ public class Menu extends AppCompatActivity {
         new View.OnClickListener() {
           @Override
           public void onClick(View v) {
-            startActivity(new Intent(Menu.this, FindGroup.class));
+            startActivity(new Intent(Menu.this, CreateGroup.class));
           }
         });
 
@@ -32,7 +32,7 @@ public class Menu extends AppCompatActivity {
         new View.OnClickListener() {
           @Override
           public void onClick(View v) {
-            startActivity(new Intent(Menu.this, CreateGroup.class));
+            startActivity(new Intent(Menu.this, FindGroup.class));
           }
         });
   }
