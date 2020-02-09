@@ -1,14 +1,14 @@
 <resources>
     <string name="app_name">StudyGroup</string>
     <string name="title_activity_menu">Menu</string>
-    <string name="title_activity_search_bar">SearchBar</string>
-    <string name="title_activity_searchbar">SearchBar</string>
+
     <string-array name="my_groups">
-        <item>Faculty of Engineering </item>
-        <item>Faculty of Medicine </item>
-        <item>Faculty of Natural Sciences </item>
-        <item>Imperial College Business School</item>
+        <item>Engineering</item>
+        <item>Medicine</item>
+        <item>Natural Sciences</item>
+        <item>Business</item>
     </string-array>
+
     <string-array name="engineering_departments">
         <item>Aeronautics</item>
         <item>Bioengineering</item>
@@ -21,6 +21,7 @@
         <item>Materials</item>
         <item>Mechanical Engineering</item>
     </string-array>
+
     <string-array name="medicine_departments">
         <item>Brain Sciences</item>
         <item>Immunology and Inflammation</item>
@@ -53,4 +54,10 @@
         <item>Fourth Year</item>
     </string-array>
     <string name="title_activity_add_event">AddEvent</string>
+    <string name="title_activity_find_group">FindGroup</string>
+
+    <string name="find_group_tab_1">Engineering</string>
+    <string name="find_group_tab_2">Medicine</string>
+    <string name="find_group_tab_3">Natural Sciences</string>
+    <string name="find_group_tab_4">Business</string>
 </resources>

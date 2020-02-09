@@ -1,25 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="match_parent">
 
-    tools:context=".SearchBar">
-
-    <SearchView
-        android:layout_width="match_parent"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
         android:layout_height="wrap_content"
-        android:queryHint="Search Here"
-        android:iconifiedByDefault="false"
-        android:id="@+id/searchView"></SearchView>
-    <ListView
-        android:padding="20dp"
-        android:layout_width="match_parent"
-        android:layout_weight="1"
-        android:layout_height="fill_parent"
-        android:layout_marginTop="10dp"
-        android:id="@+id/search_group"></ListView>
+        android:layout_width="match_parent">
 
-</LinearLayout>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/faculties"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:tabMode="fixed">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/eng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Engineering" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/med"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medicine" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/nat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Natural Sciences" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/bus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Business" />
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
