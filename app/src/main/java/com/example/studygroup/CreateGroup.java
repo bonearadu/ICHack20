@@ -19,7 +19,6 @@ public class CreateGroup extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_group);
-        mySearchView = (SearchView) findViewById(R.id.searchView);
         search_group = (ListView) findViewById(R.id.search_group);
         ArrayList<String> arrayGroup = new ArrayList<>();
         arrayGroup.addAll(Arrays.asList(getResources().getStringArray(R.array.my_groups)));

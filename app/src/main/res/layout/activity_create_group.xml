@@ -8,12 +8,6 @@
 
     tools:context=".CreateGroup">
 
-    <SearchView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:queryHint="Search Here"
-        android:iconifiedByDefault="false"
-        android:id="@+id/searchView"></SearchView>
     <ListView
         android:padding="20dp"
         android:layout_width="match_parent"
