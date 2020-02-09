@@ -24,9 +24,10 @@ public class StudyGroup {
     private final String year;
     private final int maxSize;
     private final String startDate;
-    private final String endDate;
+    private final String startTime;
+    private final String description;
 
-    public StudyGroup(String faculty, String department, String year, int maxSize, String startDate, String endDate) {
+    public StudyGroup(String faculty, String department, String year, int maxSize, String startDate, String startTime, String description) {
         DatabaseReference myRef = FirebaseDatabase.getInstance().getReference("counter");
         //myRef.setValue("0");
         final List<String> counter = new ArrayList<>();
@@ -63,7 +64,8 @@ public class StudyGroup {
         this.year = year;
         this.maxSize = maxSize;
         this.startDate = startDate;
-        this.endDate = endDate;
+        this.startTime = startTime;
+        this.description = description;
     }
 
     public int getId() {
@@ -88,9 +90,5 @@ public class StudyGroup {
 
     public String getStartDate() {
         return startDate;
-    }
-
-    public String getEndDate() {
-        return endDate;
     }
 }

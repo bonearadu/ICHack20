@@ -67,7 +67,8 @@ public class CreateGroup extends AppCompatActivity {
         final Spinner year = findViewById(R.id.year);
         EditText size = findViewById(R.id.maxSize);
         final EditText startDate = findViewById(R.id.startDate);
-        final EditText endDate = findViewById(R.id.editText3);
+        final EditText startTime = findViewById(R.id.startTime);
+        final EditText description = findViewById(R.id.description);
         Button submit = findViewById(R.id.button2);
         final Integer size1;
         if(size.getText().toString().equals("")){
@@ -80,8 +81,9 @@ public class CreateGroup extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 StudyGroup studyGroup = new StudyGroup(Department.getSelectedItem().toString(),Faculty.getSelectedItem().toString(),
-                        year.getSelectedItem().toString(), size1, startDate.getText().toString(), endDate.getText().toString());
+                        year.getSelectedItem().toString(), size1, startDate.getText().toString(), startTime.getText().toString(), description.getText().toString());
                 DatabaseAssistant.addStudyGroup(studyGroup);
+                startDate.setText("schimbat");
             }
         });
     }
