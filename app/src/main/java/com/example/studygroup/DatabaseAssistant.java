@@ -23,7 +23,7 @@ public class DatabaseAssistant {
     }
 
     public static void addStudyGroup(StudyGroup studyGroup){
-       addObject("studyGroups", studyGroup, "1");
+       addObject("studyGroups", studyGroup, studyGroup.getId() + "");
        //to changeprivate
     }
 

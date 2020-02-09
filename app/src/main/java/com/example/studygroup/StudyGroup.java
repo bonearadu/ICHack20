@@ -3,6 +3,8 @@ package com.example.studygroup;
 import android.util.Log;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -26,6 +28,17 @@ public class StudyGroup {
     private final String startDate;
     private final String startTime;
     private final String description;
+
+    public StudyGroup(){
+        id = 0;
+        faculty = "";
+        department = "";
+        year = "";
+        maxSize = 0;
+        startTime = "";
+        startDate = "";
+        description = "";
+    }
 
     public StudyGroup(String faculty, String department, String year, int maxSize, String startDate, String startTime, String description) {
         DatabaseReference myRef = FirebaseDatabase.getInstance().getReference("counter");
@@ -90,5 +103,11 @@ public class StudyGroup {
 
     public String getStartDate() {
         return startDate;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return getId() + "";
     }
 }
