@@ -14,7 +14,7 @@
         android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".FindGroup"></activity>
         <activity android:name=".ManageGroup" />
-        <activity android:name=".SearchBar" />
+        <activity android:name=".FindRoom" />
         <activity
             android:name=".Menu"
             android:label="@string/title_activity_menu"
