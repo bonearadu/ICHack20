@@ -22,7 +22,7 @@ public class DatabaseAssistant {
         myRef.child(objID).setValue(obj);
     }
 
-    public static void addStaticGroup(StudyGroup studyGroup){
+    public static void addStudyGroup(StudyGroup studyGroup){
        addObject("studyGroups", studyGroup, "1");
        //to changeprivate
     }

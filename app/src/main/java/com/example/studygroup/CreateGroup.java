@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -62,7 +64,26 @@ public class CreateGroup extends AppCompatActivity {
 
             }
         });
-        //
+        final Spinner year = findViewById(R.id.year);
+        EditText size = findViewById(R.id.maxSize);
+        final EditText startDate = findViewById(R.id.startDate);
+        final EditText endDate = findViewById(R.id.editText3);
+        Button submit = findViewById(R.id.button2);
+        final Integer size1;
+        if(size.getText().toString().equals("")){
+            size1 = -1;
+        }
+        else{
+            size1 = Integer.parseInt(size.getText().toString());
+        }
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                StudyGroup studyGroup = new StudyGroup(Department.getSelectedItem().toString(),Faculty.getSelectedItem().toString(),
+                        year.getSelectedItem().toString(), size1, startDate.getText().toString(), endDate.getText().toString());
+                DatabaseAssistant.addStudyGroup(studyGroup);
+            }
+        });
     }
 
 }
