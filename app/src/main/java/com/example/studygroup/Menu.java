@@ -21,7 +21,7 @@ public class Menu extends AppCompatActivity {
         findStudyGroup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Menu.this, FindRoom.class));
+                startActivity(new Intent(Menu.this, CreateGroup.class));
             }
         });
 
