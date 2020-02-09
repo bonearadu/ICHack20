@@ -12,26 +12,27 @@ public class Menu extends AppCompatActivity {
     private Button findGroup;
     private Button createGroup;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_menu);
 
-        findGroup = findViewById(R.id.findStudyGroup);
-        findGroup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Menu.this, SearchBar.class));
-            }
+    Button findStudyGroup = findViewById(R.id.findStudyGroup);
+    findStudyGroup.setOnClickListener(
+        new View.OnClickListener() {
+          @Override
+          public void onClick(View v) {
+            startActivity(new Intent(Menu.this, FindGroup.class));
+          }
         });
 
-        createGroup = findViewById(R.id.createStudyGroup);
-        createGroup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Menu.this, CreateGroup.class));
-            }
+    Button createStudyGroup = findViewById(R.id.createStudyGroup);
+    createStudyGroup.setOnClickListener(
+        new View.OnClickListener() {
+          @Override
+          public void onClick(View v) {
+            startActivity(new Intent(Menu.this, CreateGroup.class));
+          }
         });
-    }
-
+  }
 }

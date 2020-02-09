@@ -3,7 +3,6 @@
     <string name="title_activity_menu">Menu</string>
     <string name="title_activity_search_bar">SearchBar</string>
     <string name="title_activity_searchbar">SearchBar</string>
-
     <string-array name="my_groups">
         <item>Faculty of Engineering </item>
         <item>Faculty of Medicine </item>
@@ -49,4 +48,7 @@
         <item>Analytics and Operations</item>
         <item>Strategy and Organisational Behaviour</item>
     </string-array>
+=======
+    <string name="title_activity_add_event">AddEvent</string>
+>>>>>>> aca1ffbbce370246c8232a91454396afd43eaf58
 </resources>
