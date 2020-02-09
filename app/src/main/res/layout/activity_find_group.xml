@@ -6,8 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context=".FindGroup">
+    tools:context=".SearchBar">
 
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Search Here"
+        android:iconifiedByDefault="false"
+        android:id="@+id/searchView"></SearchView>
     <ListView
         android:padding="20dp"
         android:layout_width="match_parent"
