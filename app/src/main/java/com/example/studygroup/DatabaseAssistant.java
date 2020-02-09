@@ -10,7 +10,6 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
 
 import static android.content.ContentValues.TAG;
 
@@ -24,7 +23,8 @@ public class DatabaseAssistant {
     }
 
     public static void addStaticGroup(StudyGroup studyGroup){
-       addObject("studyGroups", studyGroup, studyGroup.getId()+"");
+       addObject("studyGroups", studyGroup, "1");
+       //to changeprivate
     }
 
     public static List<StudyGroup> getStudyGroups(){
