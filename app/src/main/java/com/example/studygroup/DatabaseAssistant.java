@@ -24,8 +24,23 @@ public class DatabaseAssistant {
     }
 
     public static void addStaticGroup(StudyGroup studyGroup){
-       addObject("studyGroups", studyGroup, "1");
-       //to change
+       DatabaseReference myRef = database.getReference("counter");
+        final Integer[] counter = {new Integer(-1)};
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                    counter[0] = dataSnapshot.getValue(Integer.class);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                // Getting Post failed, log a message
+                Log.w(TAG, "loadPost:onCancelled", databaseError.toException());
+                // ...
+            }
+        });
+       addObject("studyGroups", studyGroup, (counter[0]++).toString());
+       myRef.setValue(new Integer(counter[0]++));
     }
 
     public static List<StudyGroup> getStudyGroups(){
