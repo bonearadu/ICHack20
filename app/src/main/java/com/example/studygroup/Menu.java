@@ -9,25 +9,27 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Menu extends AppCompatActivity {
 
-    private Button findStudyGroup;
+    private Button findGroup;
+    private Button createGroup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        Button createGroupButton = findViewById(R.id.createStudyGroup);
-        findStudyGroup = findViewById(R.id.findStudyGroup);
-        findStudyGroup.setOnClickListener(new View.OnClickListener() {
+
+        findGroup = findViewById(R.id.findStudyGroup);
+        findGroup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Menu.this, SearchBar.class));
             }
         });
 
-        createGroupButton.setOnClickListener(new View.OnClickListener() {
+        createGroup = findViewById(R.id.createStudyGroup);
+        createGroup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Menu.this, AddEvent.class));
+                startActivity(new Intent(Menu.this, CreateGroup.class));
             }
         });
     }
