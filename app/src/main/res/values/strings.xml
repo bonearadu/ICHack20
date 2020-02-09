@@ -9,4 +9,5 @@
         <item>Faculty of Natural Sciences </item>
         <item>Imperial College Business School</item>
     </string-array>
+    <string name="title_activity_add_event">AddEvent</string>
 </resources>
