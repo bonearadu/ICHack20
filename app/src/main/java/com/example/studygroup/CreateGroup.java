@@ -10,7 +10,7 @@ import android.widget.SearchView;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class FindRoom extends AppCompatActivity {
+public class CreateGroup extends AppCompatActivity {
     SearchView mySearchView;
     ListView search_group;
     ArrayAdapter<String> adapter;
@@ -18,12 +18,12 @@ public class FindRoom extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_find_room);
+        setContentView(R.layout.activity_create_group);
         mySearchView = (SearchView) findViewById(R.id.searchView);
         search_group = (ListView) findViewById(R.id.search_group);
         ArrayList<String> arrayGroup = new ArrayList<>();
         arrayGroup.addAll(Arrays.asList(getResources().getStringArray(R.array.my_groups)));
-        adapter = new ArrayAdapter<String>(FindRoom.this,
+        adapter = new ArrayAdapter<String>(CreateGroup.this,
                 android.R.layout.simple_list_item_1, arrayGroup);
         search_group.setAdapter(adapter);
 
