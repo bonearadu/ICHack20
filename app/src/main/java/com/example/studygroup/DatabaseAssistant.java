@@ -52,9 +52,4 @@ public class DatabaseAssistant {
        DatabaseReference myRef = database.getReference("studyGroups").child(id);
        myRef.removeValue();
    }
-
-
-
-
-
 }
