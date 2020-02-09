@@ -8,23 +8,20 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.Date;
-import java.util.List;
-
 import static android.content.ContentValues.TAG;
 
 public class StudyGroup {
 
-    private final int id;
+    private int id;
     private final String faculty;
     private final String department;
     private final int year;
     private final int maxSize;
-    private final List<String> initialModules;
-    private final Date startDate;
-    private final Date endDate;
+    private final String startDate;
+    private final String startTime;
+    private final String description;
 
-    public StudyGroup(int id, String faculty, String department, int year, int maxSize, List<String> initialModules, Date startDate, Date endDate) {
+    public StudyGroup(int id, String faculty, String department, int year, int maxSize, String startDate, String startTime, String description) {
         DatabaseReference myRef = FirebaseDatabase.getInstance().getReference("counter");
         final String[] counter = new String[1];
         myRef.addValueEventListener(new ValueEventListener() {
@@ -47,9 +44,9 @@ public class StudyGroup {
         this.department = department;
         this.year = year;
         this.maxSize = maxSize;
-        this.initialModules = initialModules;
         this.startDate = startDate;
-        this.endDate = endDate;
+        this.startTime = startTime;
+        this.description = description;
     }
 
     public int getId() {
@@ -72,15 +69,15 @@ public class StudyGroup {
         return maxSize;
     }
 
-    public List<String> getInitialModules() {
-        return initialModules;
-    }
-
-    public Date getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
-    public Date getEndDate() {
-        return endDate;
+    public String getstartTime() {
+        return startTime;
+    }
+
+    public String getDescription() {
+        return description;
     }
 }
