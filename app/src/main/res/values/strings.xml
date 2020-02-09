@@ -1,13 +1,50 @@
 <resources>
     <string name="app_name">StudyGroup</string>
     <string name="title_activity_menu">Menu</string>
-    <string name="title_activity_search_bar">SearchBar</string>
-    <string name="title_activity_searchbar">SearchBar</string>
-    <string-array name="my_groups">
-        <item>Faculty of Engineering </item>
-        <item>Faculty of Medicine </item>
-        <item>Faculty of Natural Sciences </item>
-        <item>Imperial College Business School</item>
+
+    <string-array name="engineering_departments">
+        <item>Aeronautics</item>
+        <item>Bioengineering</item>
+        <item>Chemical Engineering</item>
+        <item>Civil and Environmental Engineering</item>
+        <item>Computing</item>
+        <item>Design Engineering</item>
+        <item>Earth Science and Engineering</item>
+        <item>Electrical and Electronic Engineering</item>
+        <item>Materials</item>
+        <item>Mechanical Engineering</item>
+    </string-array>
+
+    <string-array name="medicine_departments">
+        <item>Brain Sciences</item>
+        <item>Immunology and Inflammation</item>
+        <item>Institute of Clinical Sciences</item>
+        <item>Metabolism, Digestion and Reproduction</item>
+        <item>National Heart and Lung Institute</item>
+        <item>School of Public Health</item>
+        <item>Surgery and Cancer</item>
+    </string-array>
+
+    <string-array name="natural_science_departments">
+        <item>Chemistry</item>
+        <item>Life Sciences</item>
+        <item>Mathematics</item>
+        <item>Physics</item>
+    </string-array>
+
+    <string-array name="business_school_departments">
+        <item>Finance</item>
+        <item>Innovation and Entrepreneurship</item>
+        <item>Economics and Public Policy</item>
+        <item>Marketing</item>
+        <item>Analytics and Operations</item>
+        <item>Strategy and Organisational Behaviour</item>
     </string-array>
     <string name="title_activity_add_event">AddEvent</string>
+    <string name="title_activity_find_group">FindGroup</string>
+
+    <string name="find_group_tab_1">Engineering</string>
+    <string name="find_group_tab_2">Medicine</string>
+    <string name="find_group_tab_3">Natural Sciences</string>
+    <string name="find_group_tab_4">Business</string>
 </resources>
