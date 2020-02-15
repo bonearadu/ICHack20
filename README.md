@@ -1,7 +1,7 @@
 # StudyGroup
-Are you struggling with a particular subject? Need some new studying buddies? StudyGroup cames in your help.
-It is an Android Studio app design to find the perfect study group and even create your own study session.
-We use firebase to stock details about users and the created events.
+Are you struggling with a particular subject? Need some new studying buddies? StudyGroup is what you're looking for!
+It is an Android Studio app designed to find the perfect study group and even create your own study session.
+We use Firebase to store details about users and the created events.
 
 ## Prerequisites
 
