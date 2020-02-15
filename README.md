@@ -45,7 +45,7 @@ We use the two buttons to show the two options.
 <img width="321" alt="Screenshot 2020-02-09 at 09 04 02" src="https://user-images.githubusercontent.com/16389241/74099442-bfa9d500-4b1b-11ea-9c47-76c0a7ca3432.png">
 
 ### Create New Group 
-If none of the actual groups fits you, you can create a new one and schedule an event.
+If none of the available groups fits your needs, you can create a new one and schedule an event.
 Being an app initially created for Imperial College, you can choose from a series of departments and faculties.
 
 
